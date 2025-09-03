@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function TodoForm({ onAgregar }) {
-  const [texto, setTexto] = useState('');
+  const [texto, setTexto] = useState("");
 
   const manejarSubmit = (evento) => {
     evento.preventDefault();
-    if (texto.trim() === '') return;
+    if (texto.trim() === "") return;
 
     onAgregar(texto);
-    setTexto('');
+    setTexto("");
   };
 
   return (

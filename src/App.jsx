@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import TodoForm from "./componentes/TodoForm";
+import TodoList from "./componentes/TodoList";
 
 function App() {
   const [tareas, setTareas] = useState([]);
@@ -23,6 +24,11 @@ function App() {
     <div>
       <h1>Gestión de Tareas</h1>
       <TodoForm onAgregar={agregarTarea} />
+      <TodoList
+        tareas={tareas}
+        onCompletar={completarTarea}
+        onEliminar={eliminarTarea}
+      />
     </div>
   );
 }
