@@ -20,6 +20,18 @@ function App() {
     setContadorId(contadorId + 1);
   };
 
+  const completarTarea = (id) => {
+    const tareasActualizadas = tareas.map((tarea) =>
+      tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea
+    );
+    setTareas(tareasActualizadas);
+  };
+
+  const eliminarTarea = (id) => {
+    const tareasFiltradas = tareas.filter((tarea) => tarea.id !== id);
+    setTareas(tareasFiltradas);
+  };
+
   return (
     <div>
       <h1>Gestión de Tareas</h1>

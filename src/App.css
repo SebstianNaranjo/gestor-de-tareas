@@ -4,3 +4,73 @@
   padding: 2rem;
   text-align: center;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #444;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.checkbox-completar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.texto-tarea {
+  flex: 1;
+}
+
+.completada .texto-tarea {
+  text-decoration: line-through;
+  color: #7f8c8d;
+  font-weight: bold;
+  background-color: #e0ffe0;
+  border-left: 4px solid #1ddb6c;
+  padding-left: 6px;
+}
+
+.btn-eliminar {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-eliminar i {
+  font-size: 16px;
+}
+
+.btn-eliminar:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.btn-eliminar:active {
+  transform: scale(0.95);
+}

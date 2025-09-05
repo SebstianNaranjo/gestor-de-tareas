@@ -4,14 +4,20 @@ function TodoItem({ tarea, onCompletar, onEliminar }) {
   };
 
   return (
-    <li style={estilo}>
-      <input
-        type="checkbox"
-        checked={tarea.completada}
-        onChange={() => onCompletar(tarea.id)}
-      />
-      {tarea.texto}
-      <button onClick={() => onEliminar(tarea.id)}>Eliminar</button>
+    <li className={`tarea ${tarea.completada ? "completada" : ""}`}>
+      <label className="checkbox-completar">
+        <input
+          type="checkbox"
+          checked={tarea.completada}
+          onChange={() => onCompletar(tarea.id)}
+        />
+        Completar
+      </label>
+      <span className="texto-tarea">{tarea.texto}</span>
+
+      <button className="btn-eliminar" onClick={() => onEliminar(tarea.id)}>
+        <i className="fa-solid fa-trash"></i> Eliminar
+      </button>
     </li>
   );
 }
